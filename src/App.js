@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ApolloProvider, useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
 import './App.css';
+import BranchList from './components/BranchList';
+import Login from './components/Login';
+import { client } from './resolvers';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const IS_LOGGED_IN = gql`
+  query IsUserLoggedIn {
+    isLoggedIn @client
+  }
+`;
+
+const IsLoggedIn = () => {
+  const { data, refetch } = useQuery(IS_LOGGED_IN);
+  return data.isLoggedIn ?
+    <div className='main'><BranchList/></div> :
+    <Login refetch={refetch}/>
 }
+
+const App = () => (
+  <ApolloProvider client={client}>
+      <IsLoggedIn />
+  </ApolloProvider>
+);
 
 export default App;

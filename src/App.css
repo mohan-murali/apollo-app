@@ -1,3 +1,6 @@
+html  {
+  height: 100vh;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,124 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80%;
+}
+
+.branch {
+  background-color: #86C232;
+  box-shadow: 2px 2px #222629;
+  margin: 2px;
+  padding-left: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 20px;
+  min-height: 400px;
+  margin-left: 40px;
+}
+
+.branch-detail {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.customer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #6B6E70;
+}
+
+.div-login {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 280px;
+  background-color: #474B4F;
+  box-shadow: 1px 2px #222629;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.inp-login {
+  width: 80%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.div-login label {
+  margin-top: 5%;
+  color: whitesmoke;
+}
+
+.btn-login {
+  background: #86C232;
+  border-radius: 50px;
+  width: 150px;
+  height: 40px;
+  font-size: large;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #f0f8f1;
+  margin-top: 100px
+}
+
+.branch-list {
+  margin-top: 10px;
+}
+
+.new-customer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 80%;
+  align-items: center;
+  height: 250px;
+}
+
+.customer-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.customer {
+  margin-top: 10px;
+}
+
+.btn-add {
+  background: #222629;
+  border-radius: 50px;
+  width: 150px;
+  height: 60px;
+  font-size: large;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #f0f8f1;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.customer-detail{
+  box-shadow: 1px 1px black;
 }
